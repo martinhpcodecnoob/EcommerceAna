@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Arroz con Pollo",
+        "precio": 29,
+        "imagen": "img/acp.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Ceviche",
+        "precio": 35,
+        "imagen": "img/ceviche.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Chicha Morada",
+        "precio": 16,
+        "imagen": "img/chicha.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Maracuya",
+        "precio": 15,
+        "imagen": "img/maracuya.jpg"
+    }
+]

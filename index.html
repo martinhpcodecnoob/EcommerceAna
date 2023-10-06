@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="description" content="Registrarse y obtener descuentos y promociones">
+    <meta name="keyword" content="registro, promociones, accesorios de mujer, collares, aretes, moda, joyeria, fashion">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Pacifico&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/logo.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+<body>
+
+      <header class="main-header">
+          <div class="container container--flex">
+              <div class="logo-container column column--50">
+                  <h1 class="logo">Restaurant Mil Sabores</h1>
+              </div>
+              <div class="main-header__contactInfo column column--50">
+                  <p class="main-header__contactInfo__phone">
+                      <span class="fa-solid fa-phone"> 999-999-999</span>
+                  </p>
+                  <p class="main-header__contactInfo__address">
+                      <span class="fa-solid fa-location-dot"> Av. Las Piedritas 245 - Ica, Peru</span>
+                  </p>
+              </div>
+          </div>
+     
+      <nav class="main-nav">
+          <div class="container container--flex">
+              <span class="fa-solid fa-bars" id="btnmenu"></span>
+              <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Inicio</a></li>
+                <li class="menu__item"><a href="carrito.html" class="menu__link">Carrito</a></li>
+                <li class="menu__item"><a href="login.html" class="menu__link">Login</a></li>
+               </ul>
+              <div class="social-icon">
+                  <a href="https://www.facebook.com" class="social-icon__link"><span class="fa-brands fa-facebook"></span></a>
+                  <a href="https://www.instagram.com" class="social-icon__link"><span class="fa-brands fa-square-instagram"></span></a>
+                  <a href="https://www.outlook.com" class="social-icon__link"><span class="fa-solid fa-envelope"></span></a>
+              </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/b1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/b2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/b3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+       
+          <div class="container">
+            <h2 class="main-title" data-aos="fade-up-right" data-aos-duration="2000">Nuestra Carta para Ti</h2>
+            <section class="container-products" id="products-container">
+              <!-- javascript agrega los html  -->
+            </section>
+  
+          </div>
+          <div class="wrapper">
+            <h2>Comentarios</h2>
+            <h5>Mira qué opinan nuestros clientes...</h5>
+            <div class="cards_t" data-aos="zoom-in-down" data-aos-duration="3000">
+                <div class="card_t">
+          
+                    <p>Me encantó el arroz con pollo, todo en su punto. Sin duda volvería por más</p>
+                    <h3>Cristian</h3>
+                    <h4>España</h4>
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="card_t">
+                  
+                    <p>Mi hermana quedó maravillada con la chica morada. Muy exquisitos todos sus platos.</p>
+                    <h3>Alejandra</h3>
+                    <h4>Arequipa</h4>
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="card_t">
+                  
+                    <p>En su Restaurant he encontrado variedad de influencias de otras regiones lo que hace a sus platos algo único.</p>
+                    <h3>Cristina</h3>
+                    <h4>Viajera</h4>
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+            </div>
+        </div>
+  
+          <div class="mensajeria">
+              <a href="https://www.whatsapp.com/?lang=es" class="btn-wsp" target="_blank">
+                 <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://www.facebook.com" class="btn-msn" target="_blank">
+                <i class="fa-brands fa-facebook-messenger"></i>
+              </a>
+          </div>
+        </main>
+        <footer class="main-footer">
+          <div class="container container--flex">
+              <div class="column column--33">
+                  <h2 class="column__title">¿Por qué visitarnos?</h2>
+                  <p class="column__txt">En Mil Sabores estamos comprometidos en brindarte siempre lo mejor de nosotros</p>
+              </div>
+              <div class="column column--33">
+                  <h2 class="column__title">Contáctanos</h2>
+                  <p class="column__txt"> Av. Las Piedritas 245 - Ica, Peru</p>
+                  <p class="column__txt"> Telefono: 999-999-999</p>
+                  <p class="column__txt"> consultas@milsabores.com</p>
+              </div>
+              <div class="column column--33">
+                  <h2 class="column__title">Síguenos en nuestras redes</h2>
+                  <p class="column__txt"><a href="https://www.facebook.com" class="fa-brands fa-facebook"></a></p>
+                  <p class="column__txt"><a href="https://www.instagram.com" class="fa-brands fa-square-instagram"></a></p>
+                  <p class="column__txt"><a href="https://www.outlook.com" class="fa-solid fa-envelope"></a></p>
+              </div>
+              <p class="copy"> © 2023 Mil Sabores | Todos los Derechos Reservados</p>
+          </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="menu.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="productsMain.js"></script>
+        <script>
+          AOS.init();
+        </script>
+  </body>
+  </html>

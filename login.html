@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registrarse y obtener descuentos y promociones">
+    <meta name="keyword" content="registro, promociones, accesorios de mujer, collares, aretes, moda, joyeria, fashion">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Pacifico&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/logo.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo">Restaurant Mil Sabores</h1>
+            </div>
+            <div class="main-header__contactInfo column column--50">
+                <p class="main-header__contactInfo__phone">
+                    <span class="fa-solid fa-phone"> 999-999-999</span>
+                </p>
+                <p class="main-header__contactInfo__address">
+                    <span class="fa-solid fa-location-dot"> Av. Las Piedritas 245 - Ica, Peru</span>
+                </p>
+            </div>
+        </div>
+    
+    <nav class="main-nav">
+        <div class="container container--flex">
+            <span class="fa-solid fa-bars" id="btnmenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a></li>
+                <li class="menu__item"><a href="carrito.html" class="menu__link">Carrito</a></li>
+                <li class="menu__item"><a href="login.html" class="menu__link menu__link--select">Login</a></li>
+             </ul>
+            <div class="social-icon">
+                <a href="https://www.facebook.com" class="social-icon__link"><span class="fa-brands fa-facebook"></span></a>
+                <a href="https://www.instagram.com" class="social-icon__link"><span class="fa-brands fa-square-instagram"></span></a>
+                <a href="https://www.outlook.com" class="social-icon__link"><span class="fa-solid fa-envelope"></span></a>
+            </div>
+      </div>
+    </nav>
+</header>
+<main>
+    <section class="banner">
+      <img src="img/cuenta.jpg" alt="" class ="banner__img">
+      <div class="banner__content">Mi Cuenta</div>
+  </section>
+ 
+  <form id="registro-form">
+    <h2 class="title_login">Registro</h2>
+    <label>
+    <i class="fa-solid fa-user"></i>
+      <input type="text" id="nombre-usuario" placeholder="Nombre de usuario" required>
+    </label>
+    <label>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" id="contrasena" placeholder="Contraseña" required>
+    </label>
+    <label>
+        <i class="fa-solid fa-envelope"></i>
+      <input type="email" id="correo-electronico" placeholder="Correo electrónico" required>
+    </label>
+      <button class="button0" type="submit">Registrarse</button>
+  </form>
+
+ 
+  <form id="login-form">
+    <h2 class="title_login">Login</h2>
+    <label>
+      <i class="fa-solid fa-user"></i>
+      <input type="text" id="login-nombre-usuario" placeholder="Nombre de usuario" required>
+    </label>
+    <label>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" id="login-contrasena" placeholder="Contraseña" required>
+    </label>
+      <button class="button0" type="submit">Iniciar sesión</button>
+  </form>
+
+  <div id="mensaje"></div>
+  <script>
+    const usuarios = [
+        {
+            nombreUsuario: "usuario1",
+            contrasena: "contrasena1",
+            correoElectronico: "usuario1@example.com"
+        },
+        {
+            nombreUsuario: "usuario2",
+            contrasena: "contrasena2",
+            correoElectronico: "usuario2@example.com"
+        }
+    ];
+  const registroForm = document.getElementById("registro-form");
+  const loginForm = document.getElementById("login-form");
+  const mensaje = document.getElementById("mensaje");
+
+  registroForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nuevoUsuario = {
+          nombreUsuario: document.getElementById("nombre-usuario").value,
+          contrasena: document.getElementById("contrasena").value,
+          correoElectronico: document.getElementById("correo-electronico").value
+      };
+      usuarios.push(nuevoUsuario);
+      mensaje.textContent = "Usuario registrado con éxito.";
+  });
+  
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombreUsuario = document.getElementById("login-nombre-usuario").value;
+    const contrasena = document.getElementById("login-contrasena").value;
+    const usuarioEncontrado = usuarios.find(user => user.nombreUsuario === nombreUsuario && user.contrasena === contrasena);
+
+    if (usuarioEncontrado) {
+        mensaje.textContent = `Inicio de sesión exitoso para ${usuarioEncontrado.nombreUsuario}`;
+    } else {
+        mensaje.textContent = "Nombre de usuario o contraseña incorrectos.";
+    }
+});
+</script>
+  <div class="wrapper">
+    <h2>Comentarios</h2>
+    <h5>Mira qué opinan nuestros clientes...</h5>
+    <div class="cards_t" data-aos="zoom-in-down" data-aos-duration="3000">
+        <div class="card_t">
+          
+            <p>Me encantó el arroz con pollo, todo en su punto. Sin duda volvería por más</p>
+            <h3>Cristian</h3>
+            <h4>España</h4>
+            <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <div class="card_t">
+          
+            <p>Mi hermana quedó maravillada con la chica morada. Muy exquisitos todos sus platos.</p>
+            <h3>Alejandra</h3>
+            <h4>Arequipa</h4>
+            <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <div class="card_t">
+          
+            <p>En su Restaurant he encontrado variedad de influencias de otras regiones lo que hace a sus platos algo único.</p>
+            <h3>Cristina</h3>
+            <h4>Viajera</h4>
+            <i class="fa-solid fa-quote-left"></i>
+        </div>
+    </div>
+</div>
+  <div class="mensajeria">
+    <a href="https://www.whatsapp.com/?lang=es" class="btn-wsp" target="_blank">
+       <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com" class="btn-msn" target="_blank">
+      <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
+</div>
+</main>
+
+  <footer class="main-footer">
+    <div class="container container--flex">
+        <div class="column column--33">
+            <h2 class="column__title">¿Por qué visitarnos?</h2>
+            <p class="column__txt">En Mil Sabores estamos comprometidos en brindarte siempre lo mejor de nosotros</p>
+        </div>
+        <div class="column column--33">
+            <h2 class="column__title">Contáctanos</h2>
+            <p class="column__txt"> Av. Las Piedritas 245 - Ica, Peru</p>
+            <p class="column__txt"> Telefono: 999-999-999</p>
+            <p class="column__txt"> consultas@milsabores.com</p>
+        </div>
+        <div class="column column--33">
+            <h2 class="column__title">Síguenos en nuestras redes</h2>
+            <p class="column__txt"><a href="https://www.facebook.com" class="fa-brands fa-facebook"></a></p>
+            <p class="column__txt"><a href="https://www.instagram.com" class="fa-brands fa-square-instagram"></a></p>
+            <p class="column__txt"><a href="https://www.outlook.com" class="fa-solid fa-envelope"></a></p>
+        </div>
+        <p class="copy"> © 2023 Mil Sabores | Todos los Derechos Reservados</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="menu.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "usuarios": [
+      {
+        "nombreUsuario": "usuario1",
+        "contrasena": "contrasena1",
+        "correoElectronico": "usuario1@example.com"
+      },
+      {
+        "nombreUsuario": "usuario2",
+        "contrasena": "contrasena2",
+        "correoElectronico": "usuario2@example.com"
+      }
+    ]
+  }
+  
