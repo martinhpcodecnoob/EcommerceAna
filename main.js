@@ -60,13 +60,13 @@ async function renderizarProductos () {
 function anyadirProductoAlCarrito(evento) {
     const boton = evento.target;
     const productoId = boton.getAttribute('marcador');
-
+    console.log(productoId);
     // Aquí puedes realizar la lógica para agregar el producto al carrito
     
     // Luego, muestra una notificación con SweetAlert
     Swal.fire({
         icon: 'success',
-        title: 'Producto agregado',
+        title: `Producto agregado: ${baseDeDatos[productoId-1].nombre}`,
         text: 'El producto ha sido agregado al carrito con éxito.',
         showConfirmButton: false, // No muestra el botón de "Aceptar"
         timer: 1500 // Cierra automáticamente después de 1.5 segundos
