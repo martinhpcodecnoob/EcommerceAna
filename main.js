@@ -1,15 +1,13 @@
 
-
-
-
 document.addEventListener('DOMContentLoaded', async () => {
 let baseDeDatos = [];
 async function cargarBaseDeDatos() {
     const response = await fetch('./products.json');
-    baseDeDatos = await response.json();
+    if (baseDeDatos.length === 0) {
+        baseDeDatos = await response.json();
+    }
 }
 await cargarBaseDeDatos();
-
 let carrito = [];
 const divisa = '$';
 const DOMitems = document.querySelector('#items');
@@ -19,7 +17,6 @@ const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 const miLocalStorage = window.localStorage;
 
 // Funciones
-
 /**
 * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
 */
@@ -145,19 +142,7 @@ function anyadirProductoAlCarrito(evento) {
 }
 
 /**
-* Calcula el precio total teniendo en cuenta los productos repetidos
-*/
-async function calcularTotal() {
-// Recorremos el array del carrito 
-return await carrito.reduce((total, item) => {
-    // De cada elemento obtenemos su precio
-    const miItem = baseDeDatos.filter((itemBaseDatos) => {
-        return itemBaseDatos.id === parseInt(item);
-    });
-    // Los sumamos al total
-    return total + miItem[0].precio;
-    }, 0).toFixed(2);
-}
+
 
             /**
             * Varia el carrito y vuelve a dibujarlo
