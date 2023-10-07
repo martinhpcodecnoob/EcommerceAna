@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 let baseDeDatos = [];
 async function cargarBaseDeDatos() {
     const response = await fetch('./products.json');
-    if (baseDeDatos.length === 0) {
         baseDeDatos = await response.json();
-    }
 }
 await cargarBaseDeDatos();
 let carrito = [];
